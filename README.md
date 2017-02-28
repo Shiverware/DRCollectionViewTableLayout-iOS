@@ -3,7 +3,7 @@ DRCollectionViewTableLayout
 
 `UICollectionViewLayout` for displaying 2D tables, similar to those in spreadsheets. Library contains layout class and `DRCollectionViewTableLayoutManager` that acts as a proxy and allows to configure collection view, and propagate it with data in easy way. For example implementation, checkout attached demo project.
 
-Tested under iOS 7, should work on iOS 6 (check [reported issues](../../issues?labels=iOS+6) if you are planning to support iOS 6).
+Tested under iOS 10, should work on iOS 6 (check [reported issues](../../issues?labels=iOS+6) if you are planning to support iOS 6).
 
 Demo project is configured to display a table with column and row headers. Each cell has randomly generated color. Labels in cells contains `UICollectionView` indexPath for given cell, as well as layout's column and row number. Labels in headers contains `UICollectionView` section number, and layout's column/row number.
 
@@ -19,9 +19,9 @@ You can install the library using CocoaPods. To do so, you will need to add one 
 
 For stable release (recommended):
 
-    pod 'DRCollectionViewTableLayout', '~> 1.0.5'
+    pod 'DRCollectionViewTableLayout', '~> 1.0.6'
 
-Which creates dependency for version `>= 1.0.5` and `< 1.1`
+Which creates dependency for version `>= 1.0.6` and `< 1.1`
 
 For most recent or exact development version (not recommended on production):
 

@@ -54,6 +54,21 @@
                          numberOfRowsInSection:(NSUInteger)section;
 
 /**
+ *  Return gap width for layout's column in given collection view section
+ *
+ *  @param manager        Collection View Table Layout Manager
+ *  @param collectionView Collection View
+ *  @param column         Layout's column index
+ *  @param section        Collection View section
+ *
+ *  @return Column gap width
+ */
+- (CGFloat)collectionViewTableLayoutManager:(DRCollectionViewTableLayoutManager *)manager
+                             collectionView:(UICollectionView *)collectionView
+                             widthOfGapBeforeColumn:(NSUInteger)column
+                                  inSection:(NSUInteger)section;
+
+/**
  *  Return width for layout's column in given collection view section
  *
  *  @param manager        Collection View Table Layout Manager

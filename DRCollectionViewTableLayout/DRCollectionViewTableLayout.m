@@ -307,6 +307,10 @@ const NSInteger DRTopLeftColumnHeaderIndex = -1;
     for (NSUInteger columnIdx = 0; columnIdx < currentColumn; columnIdx++) {
         x += [self.delegate collectionView:self.collectionView
                                tableLayout:self
+                            widthOfGapBeforeColumn:columnIdx
+                                 inSection:indexPath.section];
+        x += [self.delegate collectionView:self.collectionView
+                               tableLayout:self
                             widthForColumn:columnIdx
                                  inSection:indexPath.section];
         x += self.horizontalSpacing / 2.f;
@@ -393,6 +397,10 @@ const NSInteger DRTopLeftColumnHeaderIndex = -1;
                 x += rowHeaderWidth + (self.horizontalSpacing / 2.f);
             }
             for (NSUInteger columnIdx = 0; columnIdx < currentColumn; columnIdx++) {
+                x += [self.delegate collectionView:self.collectionView
+                                       tableLayout:self
+                            widthOfGapBeforeColumn:columnIdx
+                                         inSection:indexPath.section];
                 x += [self.delegate collectionView:self.collectionView
                                        tableLayout:self
                                     widthForColumn:columnIdx

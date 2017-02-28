@@ -105,6 +105,14 @@
                                   numberOfColumnsInSection:section];
 }
 
+- (CGFloat)collectionView:(UICollectionView *)collectionView tableLayout:(DRCollectionViewTableLayout *)collectionViewLayout widthOfGapBeforeColumn:(NSUInteger)column inSection:(NSUInteger)section
+{
+  return [self.delegate collectionViewTableLayoutManager:self
+                                          collectionView:collectionView
+                                          widthOfGapBeforeColumn:column
+                                               inSection:section];
+}
+
 - (CGFloat)collectionView:(UICollectionView *)collectionView tableLayout:(DRCollectionViewTableLayout *)collectionViewLayout widthForColumn:(NSUInteger)column inSection:(NSUInteger)section
 {
     return [self.delegate collectionViewTableLayoutManager:self

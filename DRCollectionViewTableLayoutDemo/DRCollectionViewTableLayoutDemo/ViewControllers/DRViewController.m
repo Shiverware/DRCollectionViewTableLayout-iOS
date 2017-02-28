@@ -92,6 +92,19 @@ static NSString * const CollectionViewHeaderIdentifier = @"Header";
 
 - (CGFloat)collectionViewTableLayoutManager:(DRCollectionViewTableLayoutManager *)manager
                              collectionView:(UICollectionView *)collectionView
+                             widthOfGapBeforeColumn:(NSUInteger)column
+                                  inSection:(NSUInteger)section
+{
+  if (column == 5) {
+    return 10.f;
+  }
+  
+  return 0;
+}
+
+
+- (CGFloat)collectionViewTableLayoutManager:(DRCollectionViewTableLayoutManager *)manager
+                             collectionView:(UICollectionView *)collectionView
                              widthForColumn:(NSUInteger)column
                                   inSection:(NSUInteger)section
 {

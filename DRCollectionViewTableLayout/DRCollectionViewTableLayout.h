@@ -39,6 +39,18 @@ static NSString * const DRCollectionViewTableLayoutSupplementaryViewRowHeader = 
 - (NSUInteger)collectionView:(UICollectionView *)collectionView tableLayout:(DRCollectionViewTableLayout *)collectionViewLayout numberOfColumnsInSection:(NSUInteger)section;
 
 /**
+ *  Return width of a gap before a column in given section
+ *
+ *  @param collectionView       Collection View
+ *  @param collectionViewLayout Collection View Layout
+ *  @param column               Layout's column index
+ *  @param section              Section index (from collection view cell's indexPath property)
+ *
+ *  @return Gap width
+ */
+- (CGFloat)collectionView:(UICollectionView *)collectionView tableLayout:(DRCollectionViewTableLayout *)collectionViewLayout widthOfGapBeforeColumn:(NSUInteger)column inSection:(NSUInteger)section;
+
+/**
  *  Return width for column in given section
  *
  *  @param collectionView       Collection View

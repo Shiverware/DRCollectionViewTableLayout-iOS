@@ -315,6 +315,12 @@ const NSInteger DRTopLeftColumnHeaderIndex = -1;
                                  inSection:indexPath.section];
         x += self.horizontalSpacing / 2.f;
     }
+  
+    // Add width of gap immediatly before this column
+    x += [self.delegate collectionView:self.collectionView
+                           tableLayout:self
+                widthOfGapBeforeColumn:currentColumn
+                             inSection:indexPath.section];
     
     // compute y position
     CGFloat y = 0;
@@ -407,7 +413,13 @@ const NSInteger DRTopLeftColumnHeaderIndex = -1;
                                          inSection:indexPath.section];
                 x += self.horizontalSpacing / 2.f;
             }
-            
+          
+          // Add width of gap immediatly before this column
+          x += [self.delegate collectionView:self.collectionView
+                                 tableLayout:self
+                      widthOfGapBeforeColumn:currentColumn
+                                   inSection:indexPath.section];
+          
             // compute width
             width = [self.delegate collectionView:self.collectionView
                                       tableLayout:self

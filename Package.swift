@@ -33,8 +33,7 @@ let package = Package(
     targets: [
         .target(
             name: "DRCollectionViewTableLayout",
-            dependencies: [],
-            path: "DRCollectionViewTableLayout"
+            dependencies: []
         )
     ]
 )
